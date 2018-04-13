@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="1294.0" styleClass="backgroundContainer" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pwr.graphical_file_explorer.Controller.MainFrameController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="77.0" prefWidth="1239.0">
+            <children>
+                <Label prefHeight="85.0" prefWidth="417.0" text="Graphical File Designer" textFill="#eedfdf">
+                    <font>
+                        <Font name="Bodoni MT Poster Compressed" size="72.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <HBox prefHeight="641.0" prefWidth="1239.0">
+            <children>
+                <Region prefHeight="641.0" prefWidth="86.0" />
+                <ScrollPane fx:id="scrollPaneDirectory" fitToHeight="true" fitToWidth="true" prefHeight="636.0" prefWidth="369.0">
+                    <content>
+                        <StackPane fx:id="flowPaneDirectory" prefHeight="634.0" prefWidth="366.0" />
+                    </content>
+                </ScrollPane>
+                <Region prefHeight="641.0" prefWidth="96.0" />
+                <ScrollPane fx:id="scrollPaneImages" prefHeight="641.0" prefWidth="522.0" style="-fx-border-radius: 1500;" HBox.hgrow="ALWAYS">
+                    <content>
+                        <FlowPane fx:id="miniaturesFlowPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="636.0" prefWidth="513.0" style="-fx-background-radius: 10;" />
+                    </content>
+                </ScrollPane>
+                <Region prefHeight="638.0" prefWidth="42.0" />
+                <VBox prefHeight="641.0" prefWidth="220.0" style="-fx-border-color: white;">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="28.0" prefWidth="214.0">
+                            <children>
+                                <Label text="current directory description" textFill="WHITE" />
+                            </children>
+                        </HBox>
+                        <Region prefHeight="0.0" prefWidth="214.0" />
+                        <HBox alignment="CENTER" prefHeight="205.0" prefWidth="214.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="205.0" prefWidth="214.0">
+                                    <children>
+                                        <TextArea fx:id="textAreaDescription" editable="false" prefHeight="191.0" prefWidth="200.0" wrapText="true" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="28.0" prefWidth="214.0">
+                            <children>
+                                <Label text="current file choosed" textFill="WHITE" />
+                            </children>
+                        </HBox>
+                        <TextArea fx:id="textAreaSelectedFile" editable="false" prefHeight="47.0" prefWidth="214.0" text="-------------------------------" wrapText="true" />
+                        <Region prefHeight="50.0" prefWidth="214.0" />
+                        <HBox prefHeight="133.0" prefWidth="214.0">
+                            <children>
+                                <Button fx:id="buttonFileModel" disable="true" mnemonicParsing="false" onAction="#buttonFileModel_onClick" prefHeight="118.0" prefWidth="220.0" text="photo modelling">
+                                    <font>
+                                        <Font size="22.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <HBox prefHeight="146.0" prefWidth="1294.0">
+            <children>
+                <VBox prefHeight="146.0" prefWidth="353.0" />
+                <VBox alignment="CENTER" prefHeight="146.0" prefWidth="380.0">
+                    <children>
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonChooseDirectory_onClick" prefHeight="72.0" prefWidth="177.0" text="choose directory" wrapText="true" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="146.0" prefWidth="412.0" />
+                <VBox alignment="CENTER" prefHeight="143.0" prefWidth="706.0" style="-fx-border-color: white;">
+                    <children>
+                        <Region prefHeight="23.0" prefWidth="504.0" />
+                        <HBox prefHeight="18.0" prefWidth="506.0">
+                            <children>
+                                <Slider fx:id="sliderSize" prefHeight="18.0" prefWidth="529.0" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="107.0" prefWidth="426.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="114.0" prefWidth="282.0">
+                                    <children>
+                                        <ImageView fx:id="rotateLeft" fitHeight="100.0" fitWidth="197.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../image/rotate_left.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="114.0" prefWidth="198.0">
+                                    <children>
+                                        <ImageView fx:id="rotateRight" fitHeight="100.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../image/rotate_right.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox prefHeight="143.0" prefWidth="457.0" />
+            </children>
+        </HBox>
+    </children>
+</VBox>
